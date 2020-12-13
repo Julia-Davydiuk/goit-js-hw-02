@@ -6,21 +6,23 @@
 // добавляет в конец строки троеточие '...', после чего возвращает укороченную версию.
 
 const formatString = function(string) {
-    // твой код
+
+  if (string.split('').length > 40) {
+  const format = string.split('').slice(0, 39);
+  format.splice(40, 0, '...');
+  return format.join('');
+}
+  return string;
   };
-  // с помощю свойства .langs
-  
-  /*
-   * Вызовы функции для проверки работоспособности твоей реализации.
-   */
+
   console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
   // вернется оригинальная строка
   
   console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
-  // вернется форматированная строка
+  // // вернется форматированная строка
   
   console.log(formatString('Curabitur ligula sapien.'));
-  // вернется оригинальная строка
+  // // вернется оригинальная строка
   
   console.log(
     formatString(
