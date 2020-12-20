@@ -7,8 +7,8 @@
 
 const formatString = function(string) {
 
-  if (string.split('').length > 40) {
-  const format = string.split('').slice(0, 39);
+  if (string.length > 40) {
+  const format = string.split('').slice(0, 40);
   format.splice(40, 0, '...');
   return format.join('');
 }
